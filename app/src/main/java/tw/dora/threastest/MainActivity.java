@@ -18,12 +18,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 super.run();
+                doThread1();
             }
         }.start();
     }
 
-    public void doThread1(View view) {
-        for (int i=0;i<20;i++){
+    public void doThread1() {
+        for (int i=0;i<100;i++){
             Log.v("brad","i = "+i);
             try {
                 Thread.sleep(500);
